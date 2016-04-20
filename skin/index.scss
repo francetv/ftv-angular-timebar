@@ -1,0 +1,45 @@
+.progressBar {
+    height: $progress-height;
+    background-color: rgba($progress-bg-color, .15);
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    @media (max-width: $screen-tablet-max) {
+        height: $progress-height-mobile;
+    }
+
+    &__bar {
+        background: $progress-bar-color;
+        width: 0;
+        height: 100%;
+        float: left;
+    }
+
+    &__cursor {
+        cursor: pointer;
+        width: $progress-cursor-width;
+        float: left;
+        height: 100%;
+        margin-left: -$progress-cursor-width;
+        position: relative;
+
+        &__block {
+            width: $progress-cursor-width;
+            height: inherit;
+            background-color: $progress-cursor-color;
+            margin: auto;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    @media (max-width: $screen-tablet-max) {
+        &__cursor {
+            width: $progress-cursor-width-mobile;
+            margin-left: -$progress-cursor-width-mobile;
+            margin-top: -20px;
+            height: 200%;
+        }
+    }
+}

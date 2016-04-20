@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="demoApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.2/angular.min.js"></script>
+    <script src="dist/component.js"></script>
+    <script src="demo/index.js"></script>
+    <link rel="stylesheet" href="dist/component.css">
+  </head>
+  <body ng-controller="DemoController">
+    <h1>Time bar</h1>
+    <time-bar
+            class="progressBarContainer progressBarContainer--visible"
+            duration="getDuration()"
+            on-cursor-jumped="onCursorJumped(time)"
+            on-cursor-start-dragging="startDragging()"
+            on-cursor-stop-dragging="stopDragging()"
+            on-cursor-dragging="dragging(time)">
+    </time-bar>
+  <p>
+    Callback:
+    <ul>
+      <li>on-cursor-jumped: when cursor jump to antoher position</li>
+      <li>on-cursor-start-dragging: when cursor is clicked and hold by user</li>
+      <li>on-cursor-stop-dragging: when cursor is released by user</li>
+      <li>on-cursor-dragging: when dragged by user</li>
+    </ul>
+  </p>
+  <p>
+    Time bar is 60 sec long<br>
+    Data:
+    <ul>
+      <li>on-cursor-jumped: {{cursorPosition}} sec</li>
+      <li>on-cursor-dragging: {{timeDragged}} sec</li>
+      <li>on-cursor-start-dragging: {{isDragging}}</li>
+      <li>on-cursor-stop-dragging: {{!isDragging}}</li>
+    </ul>
+  </p>
+  </body>
+</html>
