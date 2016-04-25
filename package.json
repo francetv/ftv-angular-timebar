@@ -21,7 +21,14 @@
     "gulp-sass": "^2.2.0",
     "gulp-scss-lint": "^0.3.9",
     "run-sequence": "^1.0.2",
-    "gulp-uglify": "^1.0.2"
+    "gulp-uglify": "^1.0.2",
+    "karma": "0.12.37",
+    "karma-coverage": "~0.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.6",
+    "jasmine-core": "^2.4.1"
   },
   "repository": {
     "type": "git",

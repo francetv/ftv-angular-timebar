@@ -1,4 +1,4 @@
-angular.module('ftv.component.timeBar', [
+angular.module('ftv.components.timeBar', [
         'ftv.components.timeBar.templates'
     ])
     .directive('timeBar', ['$timeout', '$document', '$window', function ($timeout, $document, $window) {

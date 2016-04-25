@@ -1,7 +1,7 @@
-FTVEN - imebar
+Ftv::Components::Timebar
 ========================
 
-Timebar for video player
+Angular Timebar component usually used for video player to quickly going on different time by clicking or dragging.
 
 # Get sources
 
@@ -31,6 +31,14 @@ gulp build
 
 ```
 gulp build-dev-watch
+```
+
+## Tests
+
+```
+gulp build
+bower install
+gulp karma-test
 ```
 
 ## Demo
