@@ -13,8 +13,7 @@ var sass = require('gulp-sass');
 var compass = require('gulp-compass');
 var scsslint = require('gulp-scss-lint');
 var csslint = require('gulp-csslint');
-
-var repoRootKarma =  __dirname + '/../';
+var karma = require('karma').server;
 
 var buildDir = 'dist';
 var appName = 'component';
@@ -119,11 +118,11 @@ gulp.task('build-dev', function(callback) {
 });
 
 gulp.task('refresh-js-src', function(callback) {
-    sequence('build-js', callback);
+    sequence('js', callback);
 });
 
 gulp.task('refresh-css-src', function(callback) {
-    sequence('css-src', callback);
+    sequence('css', callback);
 });
 
 gulp.task('build-dev-watch', function(callback) {
@@ -152,24 +151,14 @@ gulp.task('js-lint', function() {
 });
 
 gulp.task('css-lint', function() {
-    return gulp.src(css.dest + '/' + css.app.name)
-        .pipe(sass())
-        .pipe(csslint({
-            'font-sizes': false,
-            'box-model': false,
-            'important': false,
-            'bulletproof-font-face': false,
-            'fallback-colors': false,
-            'ids': false,
-            'floats': false,
-            'adjoining-classes': false,
-            'unique-headings': false,
-            'box-sizing': false,
-            'compatible-vendor-prefixes': false,
-            'universal-selector': false,
-            'known-properties': false,
-            'unqualified-attributes': false,
-            'zero-units': false
-        }))
+    return gulp.src('/component.scss')
         .pipe(scsslint());
+});
+
+// Karma //
+gulp.task('karma-test', function (callback) {
+    karma.start({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, callback);
 });

@@ -1,4 +1,4 @@
-angular.module('demoApp', ['ftv.component.timeBar']);
+angular.module('demoApp', ['ftv.components.timeBar']);
 angular.module('demoApp').controller('DemoController', ['$scope', '$rootScope', function($scope, $rootScope) {
     $scope.onCursorJumped = function(time) {
         console.log('Cursor has jumped to '+time);
