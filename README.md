@@ -1,12 +1,14 @@
 Ftv::Components::Timebar
 ========================
 
+This project is part of [francetv zoom open source projects](https://github.com/francetv/zoom-public) (iOS, Android and Angular).
+
 Angular Timebar component usually used for video player to quickly going on different time by clicking or dragging.
 
 # Get sources
 
 ```
-git clone git@gitlab.ftven.net:team-infini/ftv-angular-timebar.git
+git clone git@github.com:francetv/ftv-angular-timebar.git
 ```
 
 # Required dependencies
@@ -50,6 +52,3 @@ http-server
 ```
 
 Open [demo](http://127.0.0.1:8080/demo.html)
-
----------------------------------------
-This project is part of [francetv zoom open source projects](https://gitlab.ftven.net/team-infini/zoom-public) (iOS, Android and Angular)
