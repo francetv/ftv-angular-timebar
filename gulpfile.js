@@ -92,7 +92,9 @@ gulp.task('js', function(callback) {
 
 gulp.task('js-min', function() {
     return gulp.src(js.dest + '/' + js.app.name)
-        .pipe(uglify())
+        .pipe(uglify({
+            preserveComments: 'license'
+        }))
         .pipe(rename({
             suffix: '.min'
         }))
