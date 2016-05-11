@@ -1,8 +1,26 @@
 {
-  "name": "ftv-angular-speaker",
+  "name": "ftv-angular-timebar",
+  "version": "1.0.0",
+  "description": "France TV - Infini - Timebar",
+  "main": "dist/component.min.js",
+  "authors": [
+    "France Télévisions"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/francetv/ftv-angular-timebar",
+  "ignore": [
+    "node_modules",
+    ".gitignore",
+    ".jshintrc",
+    "component.js",
+    "karma.conf.js",
+    "gulpfile.js"
+  ],
   "dependencies": {
     "jquery": "2.2.0",
-    "angular": "angularjs#1.5.2",
+    "angular": "angularjs#1.5.2"
+  },
+  "devDependencies": {
     "angular-mocks": "1.5.2"
   }
 }
